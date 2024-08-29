@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="header">
+            <button id="prevMonth">Anterior</button>
+            <div id="monthYear"></div>
+            <button id="nextMonth">Siguiente</button>
+        </div>
+        <div class="days">
+            <div>Dom</div>
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mié</div>
+            <div>Jue</div>
+            <div>Vie</div>
+            <div>Sáb</div>
+        </div>
+        <div class="dates" id="calendarDates"></div>
+    </div>
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Evento</h2>
+            <input type="text" id="eventTitle" placeholder="Título del Evento">
+            
+            <button id="saveEvent">Guardar Evento</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>                                       

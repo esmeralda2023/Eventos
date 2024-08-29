@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.calendar {
+    width: 80%; /* Ancho aumentado */
+    max-width: 600px;
+    display: grid;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 30px; /* Tamaño de fuente aumentado */
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px; /* Relleno aumentado */
+    font-size: 40px; /* Tamaño de fuente aumentado */
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+.days div {
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 30px 0; /* Relleno aumentado */
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 25px; /* Tamaño de fuente aumentado */
+    line-height: 20px; 
+    height: 20px
+    
+}
+
+
+.dates div {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    height: 80px; /* Ajusta la altura según tus necesidades */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:first baseline;
+    text-align: center;
+}
+
+.event-info {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    right: 7px;
+    font-size: 10px; /* Tamaño de fuente reducido */
+    color: #333;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 2px;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
+.dates div:hover {
+    background-color: #f0f0f0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px; /* Relleno aumentado */
+    border: 1px solid #888;
+    width: 80%; /* Ancho aumentado */
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 30px; /* Tamaño de fuente aumentado */
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
